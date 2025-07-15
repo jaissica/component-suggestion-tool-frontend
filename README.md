@@ -34,8 +34,7 @@ This project leverages the **Visa Product Design System** (VPDS) to create a web
 ### Setup
 1. Clone this repository:
    ```bash
-   git clone <repository_url>
-   cd <project_directory>
+   git clone https://github.com/jaissica/component-suggestion-tool-frontend
 
    ```
 2. Install dependencies:
