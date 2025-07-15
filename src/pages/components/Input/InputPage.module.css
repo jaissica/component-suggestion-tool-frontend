@@ -1,41 +1,39 @@
+/* ===========================
+   InputPage.module.css
+   Scoped Utility Styles
+=========================== */
+
 /* Page container for the entire content */
-.pageContainer {
+.inputPageContainer {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
 
 /* Section container for each section */
-.sectionContainer {
+.inputPageSectionContainer {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
 /* Title styling for section */
-.sectionTitle {
+.inputPageSectionTitle {
   font-size: 1.25rem;
   font-weight: bold;
 }
 
-/* Button wrapper styling */
-.buttonWrapper {
+/* Section styling (individual blocks inside the page) */
+.inputPageSection {
   display: flex;
-  gap: 12px;
-  margin-top: 1rem;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-/* Button styling */
-.button {
-  border-radius: 12px;
-  padding: 14px;
-  font-size: 1rem;
+/* Section header text (for headings inside sections) */
+.inputPageSectionHeader {
+  font-size: 1.25rem;
   font-weight: 600;
-}
-
-/* Input message (error message) styling */
-.inputMessage {
-  color: red;
 }
 
 /* Page title wrapper */
@@ -47,11 +45,39 @@
 
 /* Page title styling */
 .pageTitle {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 2.25rem; /* Match BannerPage title */
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+/* Button wrapper styling */
+.inputPageButtonWrapper {
+  display: flex;
+  gap: 12px;
+  margin-top: 1rem;
+}
+
+/* Button styling */
+.inputPageButton {
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Input message (error message) styling */
+.inputPageInputMessage {
+  color: red;
 }
 
 /* Utility spacing for layout */
-.utilitySpacing {
+.inputPageUtilitySpacing {
   margin-bottom: 1.5rem;
+}
+
+.inputPageLabel {
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: inline-block;
 }
