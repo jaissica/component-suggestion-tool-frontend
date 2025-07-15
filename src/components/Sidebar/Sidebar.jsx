@@ -9,8 +9,9 @@ export default function Sidebar({ isDarkMode }) {
   const location = useLocation();
 
   useEffect(() => {
-    // fetch("http://localhost:5050/api/components")
-    fetch(`${import.meta.env.VITE_API_URL}/api/components`)
+    const baseURL = import.meta.env.VITE_API_URL?.replace(/\/+$/, "") || "";
+
+    fetch(`${baseURL}/api/components`)
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data) && data.length > 0) {

@@ -12,9 +12,8 @@ export default function ComponentPage() {
     async function fetchComponent() {
       try {
         // const res = await fetch(`http://localhost:5050/api/components/${slug}`);
-        const res = await fetch(
-          `${import.meta.env.VITE_API_URL}/api/components/${slug}`
-        );
+        const baseURL = import.meta.env.VITE_API_URL.replace(/\/+$/, "");
+        const res = await fetch(`${baseURL}/api/components/${slug}`);
         if (!res.ok) {
           throw new Error("Failed to fetch component data");
         }
