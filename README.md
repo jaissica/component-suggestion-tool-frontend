@@ -34,7 +34,8 @@ This project leverages the **Visa Product Design System** (VPDS) to create a web
 ### Setup
 1. Clone this repository:
    ```bash
-   git clone https://github.com/jaissica/component-suggestion-tool-frontend
+   git clone <repository_url>
+   cd <project_directory>
 
    ```
 2. Install dependencies:
@@ -124,4 +125,4 @@ The **styles page** contains global CSS and custom styling for the app. It utili
 
 ## **Deployment**
 
-The frontend project is deployed using **Netlify**. Here’s the https://component-suggestion-tool.netlify.app/ to the live app.
+The frontend project is deployed using **Netlify**. Here’s the https://component-suggestion-tool-frontend.netlify.app/ to the live app.

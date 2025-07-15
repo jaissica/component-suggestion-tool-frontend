@@ -1,5 +1,6 @@
-import React from "react";
-import styles from "./ComponentDocLayout.module.css"; // Import CSS module
+import React, { useState } from "react";
+import styles from "./ComponentDocLayout.module.css";
+import { GenericCopyTiny } from "@visa/nova-icons-react";
 
 export default function ComponentDocLayout({
   title,
@@ -8,6 +9,20 @@ export default function ComponentDocLayout({
   code,
   props,
 }) {
+  const [copySuccess, setCopySuccess] = useState(false);
+
+  const handleCopyClick = () => {
+    navigator.clipboard
+      .writeText(code)
+      .then(() => {
+        setCopySuccess(true);
+        setTimeout(() => setCopySuccess(false), 2000); // Reset after 2 seconds
+      })
+      .catch(() => {
+        setCopySuccess(false);
+      });
+  };
+
   return (
     <div className={styles.container} role="main">
       {/* Heading */}
@@ -26,10 +41,22 @@ export default function ComponentDocLayout({
       {/* Code Section */}
       {code && (
         <section className={styles.codeSection}>
-          <h2 className={styles.codeHeading}>Code</h2>
-          <pre className={styles.codeContainer}>
-            <code>{code}</code>
-          </pre>
+          <div className={styles.codeHeaderRow}>
+            <h2 className={styles.codeHeading}>Code</h2>
+            <button
+              onClick={handleCopyClick}
+              aria-label="Copy code"
+              className={styles.iconButton}
+            >
+              <GenericCopyTiny size={14} aria-hidden="true" />
+            </button>
+          </div>
+
+          <div className={styles.codeWrapper}>
+            <pre className={styles.codeContainer}>
+              <code>{code}</code>
+            </pre>
+          </div>
         </section>
       )}
 
