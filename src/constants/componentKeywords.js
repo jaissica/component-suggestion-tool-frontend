@@ -1,0 +1,18 @@
+export const COMPONENT_KEYWORDS = {
+  form: "Form",
+  email: "Input",
+  input: "Input",
+  checkbox: "Checkbox",
+  remember: "Checkbox",
+  radio: "RadioGroup",
+  select: "Select",
+  dropdown: "Select",
+  submit: "Button",
+  click: "Button",
+  alert: "Banner",
+  error: "Banner",
+  success: "Banner",
+  card: "ContentCard",
+  tooltip: "Tooltip",
+  accordion: "Accordion",
+};

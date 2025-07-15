@@ -1,0 +1,45 @@
+/* ComponentPage.module.css */
+.componentContainer {
+  padding: 2rem;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.componentTitle {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.componentDescription {
+  font-style: italic;
+  color: gray;
+  text-align: center;
+}
+
+.usageSection {
+  margin-top: 1rem;
+}
+
+.usageCode {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.tagsSection {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: gray;
+  text-align: center;
+}
+
+.loadingMessage, .errorMessage {
+  padding: 2rem;
+  text-align: center;
+}
+
+.errorMessage {
+  color: red;
+}

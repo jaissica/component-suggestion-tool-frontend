@@ -1,0 +1,50 @@
+/* ================================
+   Global Reset & Layout
+================================= */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: var(--visa-font);
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+/* ================================
+   Global Links
+================================= */
+a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ================================
+   Tables
+================================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+table th,
+table td {
+  text-align: left;
+  padding: 0.75rem;
+  border: 1px solid var(--code-border);
+}
+
+table thead {
+  background-color: var(--table-header-bg);
+}

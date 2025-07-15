@@ -1,0 +1,50 @@
+.formContainer {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.inputField,
+.textareaField {
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+.textareaField {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.errorText {
+  color: red;
+}
+
+.rememberText {
+  margin-left: 4px;
+}
+
+.submitButton {
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.pageTitleWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pageTitle {
+  font-size: 1.5rem;
+}
+
+.buttonWrapper {
+  margin-bottom: 1.5rem;
+}
+
+.sectionHeader {
+  font-size: 1.25rem;
+  font-weight: bold;
+}

@@ -1,0 +1,30 @@
+/* ================================
+   Footer Component Styles
+================================= */
+.footer {
+  margin-top: auto;
+  padding: 1.5rem 1rem;
+}
+
+.footerText {
+  color: var(--text-color);
+}
+
+.footerLink {
+  color: var(--link-color);
+}
+
+.footerLink:hover,
+.footerLink:focus {
+  color: var(--link-hover-color);
+}
+
+.dark {
+  background-color: #000;
+  color: #fff;
+}
+
+.light {
+  background-color: #f5f5f5;
+  color: #000;
+}

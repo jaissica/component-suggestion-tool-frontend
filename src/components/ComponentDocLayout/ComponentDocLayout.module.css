@@ -1,0 +1,86 @@
+/* ================================
+   ComponentDocLayout Styles
+================================= */
+.container {
+  padding: 2.5rem 1.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+  color: var(--text-color);
+}
+
+.heading {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.description {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  color: var(--text-color-muted);
+}
+
+.previewSection {
+  margin-bottom: 3rem;
+}
+
+.previewHeading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.codeSection {
+  margin: 2.5rem 0;
+}
+
+.codeHeading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.codeContainer {
+  background-color: var(--code-bg);
+  color: var(--code-color);
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: monospace;
+  font-size: 0.95rem;
+  border: 1px solid var(--code-border);
+}
+
+.hr {
+  margin: 3rem 0;
+  border: none;
+  border-top: 1px solid var(--code-border);
+}
+
+.tableContainer {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--code-border);
+  font-size: 0.95rem;
+}
+
+.tableHeader {
+  background-color: var(--table-header-bg);
+}
+
+.tableCell {
+  padding: 0.75rem;
+  border: 1px solid var(--code-border);
+  text-align: left;
+  color: var(--text-color);
+}
+
+.tableCode {
+  font-family: monospace;
+}

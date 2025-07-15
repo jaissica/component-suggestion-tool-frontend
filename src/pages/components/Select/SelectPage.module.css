@@ -1,0 +1,47 @@
+/* Container for the entire page content */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Utility spacing for layout consistency */
+.utilitySpacing {
+  margin-bottom: 1.5rem;
+}
+
+/* Section container for each section */
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Title styling for each section */
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Button wrapper for layout */
+.buttonWrapper {
+  display: flex;
+  gap: 12px;
+  margin-top: 1rem;
+}
+
+/* Select input control padding */
+.selectControl {
+  padding: 12px;
+}
+
+/* Error message styling */
+.errorMessage {
+  color: red;
+}
+
+/* Page title styling */
+.pageTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+}

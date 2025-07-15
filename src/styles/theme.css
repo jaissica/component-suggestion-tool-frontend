@@ -1,0 +1,415 @@
+/* ================================
+   Theme-Specific Variables
+================================= */
+.theme-visa-light {
+  --text-color: #000;
+  --background-color: #fff;
+  --code-bg: #f4f4f4;
+  --code-color: #222;
+  --code-border: #ddd;
+  --table-header-bg: #f0f0f0;
+  --accordion-bg: #fff;
+
+  --palette-default-active: #1434cb;
+  --palette-default-active-hover: #173be8;
+  --palette-default-active-pressed: #0f2595;
+  --palette-default-text-on-active: #ffffff;
+
+  --palette-default-surface-1: #ffffff;
+  --palette-default-surface-2: #f5f5f5;
+
+  --v-button-default-background: var(--palette-default-active);
+  --v-button-hover-background: var(--palette-default-active-hover);
+  --v-button-active-background: var(--palette-default-active-pressed);
+  --v-button-default-foreground: var(--palette-default-text-on-active);
+  --v-button-default-border-color: var(--palette-default-active);
+
+  --v-surface-default: var(--palette-default-surface-1);
+  --v-surface-subtle: var(--palette-default-surface-2);
+  --v-surface-raised: var(--palette-default-surface-1);
+  --v-background-default: var(--palette-default-surface-1);
+
+  --v-accordion-panel-background-color: var(--palette-default-surface-1);
+  --v-accordion-header-background-color: var(--palette-default-surface-1);
+  --v-input-background: #ffffff;
+  --v-input-border: #ccc;
+  --v-input-color: #000;
+
+  --focus-border-color: #1434CB;
+}
+
+.theme-visa-dark {
+  --text-color: #f1f1f1;
+  --background-color: #1b1b1b;
+  --code-bg: #2c2c2c;
+  --code-color: #f1f1f1;
+  --code-border: #555;
+  --table-header-bg: #333;
+
+  --palette-default-active: #BDEAFF;
+  --palette-default-active-hover: #DBF4FF;
+  --palette-default-active-pressed: #80D7FF;
+  --palette-default-text-on-active: #2E2E2E;
+
+  --palette-default-surface-1: #0A0A0A;
+  --palette-default-surface-2: #1A1A1A;
+
+  --v-button-default-background: var(--palette-default-active);
+  --v-button-hover-background: var(--palette-default-active-hover);
+  --v-button-active-background: var(--palette-default-active-pressed);
+  --v-button-default-foreground: var(--palette-default-text-on-active);
+  --v-button-default-border-color: var(--palette-default-active);
+
+  --v-surface-default: var(--palette-default-surface-1);
+  --v-surface-subtle: var(--palette-default-surface-2);
+  --v-surface-raised: var(--palette-default-surface-2);
+  --v-background-default: var(--palette-default-surface-1);
+
+  --v-accordion-panel-background-color: var(--palette-default-surface-1);
+  --v-accordion-header-background-color: var(--palette-default-surface-1);
+  --v-input-background: #1b1b1b;
+  --v-input-border: #ccc;
+  --v-input-color: #fff;
+
+  --focus-border-color: #7dcfff;
+}
+
+/* ================================
+   Global Variables
+================================= */
+:root {
+  --visa-primary: #1a1f71;
+  --visa-secondary: #e0e0e0;
+  --visa-light-bg: #f4f4f4;
+  --visa-text: #333;
+  --visa-radius: 6px;
+  --visa-font: 'Inter', sans-serif;
+  --visa-dark-accent: #0d1b4c;
+
+  --nova-checkbox-background: white !important;
+  --nova-checkbox-checkmark-color: white !important;
+  --nova-radio-background: white !important;
+  --v-radio-indicator-background: white !important;
+  --v-checkbox-indicator-foreground: var(--visa-primary) !important;
+}
+
+/* ================================
+   Theme-Aware Link Styling
+================================= */
+[data-theme="light"] {
+  --link-color: #1a1f71;
+  --link-hover-color: #1a1f71;
+}
+
+[data-theme="dark"] {
+  --link-color: #66b2ff;
+  --link-hover-color: #99ccff;
+}
+
+.v-link {
+  color: var(--link-color) !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+}
+
+.v-link:hover,
+.v-link:focus,
+.v-link:active {
+  color: var(--link-hover-color) !important;
+  text-decoration: underline !important;
+  outline: none;
+}
+
+/* ================================
+   Base Styling
+================================= */
+body {
+  margin: 0;
+  font-family: var(--visa-font);
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+textarea {
+  font-family: var(--visa-font);
+  border: 1px solid var(--visa-secondary);
+  border-radius: var(--visa-radius);
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+pre {
+  background-color: var(--code-bg);
+  color: var(--code-color);
+  border: 1px solid var(--code-border);
+  padding: 12px;
+  border-radius: var(--visa-radius);
+  overflow-x: auto;
+}
+
+/* ================================
+   Input Fields
+================================= */
+.v-input,
+.v-input__input,
+.v-label,
+.v-input-message {
+  color: var(--text-color) !important;
+  background-color: var(--background-color) !important;
+  border: 1px solid var(--code-border) !important;
+}
+
+.v-input-container {
+  background-color: var(--background-color) !important;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+/* ================================
+   Accordion Styling
+================================= */
+.v-accordion {
+  margin-bottom: 1rem;
+  background-color: var(--v-accordion-panel-background-color) !important;
+  border: 1px solid black !important;
+  border-radius: 6px;
+}
+
+.v-accordion__heading,
+.v-accordion__header {
+  background-color: var(--v-accordion-header-background-color) !important;
+  border-bottom: 1px solid black !important;
+  padding: 1rem !important;
+  font-weight: 600;
+  border-radius: 6px 6px 0 0;
+  color: var(--visa-primary) !important;
+}
+
+.v-accordion__panel {
+  background-color: var(--v-accordion-panel-background-color) !important;
+  padding: 1rem !important;
+  border-top: none !important;
+  border-radius: 0 0 6px 6px;
+  color: var(--text-color) !important;
+}
+
+.v-accordion__toggle-icon {
+  transition: transform 0.3s ease;
+}
+
+.v-accordion__toggle-icon[aria-expanded="true"] {
+  transform: rotate(180deg);
+}
+
+/* ================================
+   Button Styling
+================================= */
+.v-button,
+.v-button--secondary,
+.v-button--primary,
+.v-button--tertiary {
+  background-color: var(--v-button-default-background) !important;
+  color: var(--v-button-default-foreground) !important;
+  border: 1px solid var(--v-button-default-border-color) !important;
+}
+
+/* ================================
+   Utility & Reset
+================================= */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  padding: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.header-logo {
+  height: 56px !important;
+  width: auto !important;
+  object-fit: contain;
+}
+
+.visa-icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* ================================
+   Custom Checkbox Styling (Global)
+================================= */
+.v-checkbox,
+.v-checkbox__box {
+  background-color: white !important;
+  border: 2px solid var(--v-button-default-border-color) !important;
+  border-radius: 4px !important;
+}
+
+[data-theme="light"] .v-checkbox.v-checkbox--checked,
+[data-theme="light"] .v-checkbox__box.v-checkbox--checked {
+  background-color: var(--v-button-default-background) !important;
+  border-color: var(--v-button-default-border-color) !important;
+  color: white !important;
+}
+
+[data-theme="dark"] .v-checkbox.v-checkbox--checked,
+[data-theme="dark"] .v-checkbox__box.v-checkbox--checked {
+  background-color: var(--palette-default-active) !important;
+  border-color: var(--palette-default-active) !important;
+  color: var(--palette-default-text-on-active) !important;
+}
+
+.v-checkbox__checkmark {
+  color: inherit !important;
+  stroke: inherit !important;
+  fill: inherit !important;
+}
+
+/* ================================
+   Custom Radio Styling
+================================= */
+.v-radio,
+.v-radio__indicator {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  background-color: white !important;
+  border: 2px solid var(--v-button-default-border-color) !important;
+  border-radius: 50% !important;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  cursor: pointer;
+}
+
+.v-radio__dot,
+.visa-radio .v-radio__dot {
+  display: none !important;
+}
+
+[data-theme="light"] .v-radio--checked .v-radio__indicator::after,
+[data-theme="light"] .visa-radio.v-radio--checked .v-radio__indicator::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #1434cb !important;
+}
+
+[data-theme="dark"] .v-radio--checked .v-radio__indicator::after,
+[data-theme="dark"] .visa-radio.v-radio--checked .v-radio__indicator::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #BDEAFF !important;
+}
+
+.v-radio.visa-radio,
+.visa-radio input[type="radio"] {
+  accent-color: unset !important;
+}
+
+.v-accordion__panel {
+  background-color: #ffffff !important;
+}
+
+/* Set the headline text color to dark blue */
+.v-content-card .v-content-card-title {
+    color: #0045e5 !important; /* Dark blue for the headline */
+}
+
+/* Set the subtitle text color to gray */
+.v-content-card .v-content-card-subtitle {
+    color: #6c757d !important; /* Gray for the subtitle */
+}
+
+/* Set the body text color to black */
+.v-content-card p {
+    color: #000000 !important; /* Black for body text */
+}
+
+/* Ensure the background color of the content card is white */
+.v-content-card {
+    background-color: #ffffff !important; /* White background */
+}
+
+/* Ensure the link color is dark blue */
+.v-content-card .v-link {
+    color: #0045e5 !important; /* Dark blue for the text */
+    font-weight: 500 !important;
+    text-decoration: none !important;
+}
+
+/* Set icon color to dark blue for the link */
+.v-content-card .v-link svg path {
+    fill: #0045e5 !important; /* Dark blue for the SVG icon */
+}
+
+/* Button styling for dark blue background and white text */
+.v-content-card .v-button {
+    background-color: #0045e5 !important; /* Dark blue for the button */
+    color: #ffffff !important; /* White text */
+}
+
+/* Ensure the background color of the body is white */
+.v-content-card-body {
+    background-color: #ffffff !important; /* White background */
+}
+
+/* Ensure the arrow color matches the dark blue for headline */
+.v-icon.v-icon-chevron-right path,
+.v-icon-v-icon-visa .VisaFileUploadTiny path,
+.v-icon-v-icon-visa .VisaAccountLow path,
+.v-icon-v-icon-visa .VisaSecurityLockHigh path,
+.v-icon-v-icon-visa .VisaArrowUpTiny path {
+    fill: #0045e5 !important; /* Dark blue color */
+}
+
+/* ===============================
+   Custom Layout Utilities (App.jsx)
+================================== */
+.layout-fullscreen {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.flex-page-wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.sidebar-fixed-width {
+  width: 240px;
+  flex-shrink: 0;
+}
+
+.main-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-scrollable-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}

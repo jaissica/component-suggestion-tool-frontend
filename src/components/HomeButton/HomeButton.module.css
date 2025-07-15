@@ -1,0 +1,11 @@
+/* ================================
+   HomeButton Styles
+================================= */
+.homeButton {
+  background-color: var(--v-button-default-background);
+  border: 1px solid var(--v-button-default-border-color);
+  color: var(--v-button-default-foreground);
+  font-size: 1.25rem;
+  border-radius: 6px;
+  padding: 0.5rem;
+}

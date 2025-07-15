@@ -1,0 +1,82 @@
+/* ================================
+   Sidebar Styles
+================================= */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  padding: 1.5rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border-right: 1px solid var(--code-border);
+  box-sizing: border-box;
+  overflow-y: auto;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebarMobile {
+  position: fixed;
+  top: 0;
+  left: -240px; /* Sidebar is off-screen initially */
+  z-index: 1000;
+}
+
+.sidebarOpen {
+  left: 0; /* Sidebar slides in when open */
+}
+
+.sidebarDesktop {
+  position: relative;
+  z-index: auto;
+}
+
+.hamburgerButton {
+  position: fixed;
+  top: 12rem;
+  left: 1rem;
+  z-index: 1001;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.sidebarTitle {
+  font-size: 1.25rem;
+  margin: 1.5rem 0 1rem;
+}
+
+.sidebarLink {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.activeLink {
+  color: #1a1f71;
+  font-weight: bold;
+}
+
+.sidebarLinkList {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.sidebarLinkItem {
+  margin-bottom: 10px;
+}
+
+.linkHover:hover {
+  background: var(--visa-light-bg);
+}
