@@ -14,6 +14,8 @@ import {
   VisaErrorTiny,
   GenericAccountLow,
 } from "@visa/nova-icons-react";
+import ComponentDocLayout from "../../../components/ComponentDocLayout/ComponentDocLayout";
+import HomeButton from "../../../components/HomeButton/HomeButton";
 import styles from "./InputPage.module.css";
 
 const InputExamples = ({ isDarkMode }) => {
@@ -59,15 +61,11 @@ const InputExamples = ({ isDarkMode }) => {
       label: "Default Input",
       content: (
         <InputContainer>
-          <label htmlFor="default-input" className={styles.inputPageLabel}>
-            Default Input
-          </label>
           <Input
             id="default-input"
             type="text"
             aria-required="true"
             placeholder="Enter text here"
-            className={styles.inputField}
           />
         </InputContainer>
       ),
@@ -77,14 +75,10 @@ const InputExamples = ({ isDarkMode }) => {
       content: (
         <>
           <InputContainer>
-            <label htmlFor="inline-message" className={styles.inputPageLabel}>
-              Input with Inline Message
-            </label>
             <Input
               id="inline-message"
               type="text"
               aria-describedby="inline-message-text"
-              className={styles.inputField}
             />
           </InputContainer>
           <InputMessage id="inline-message-text">
@@ -97,9 +91,6 @@ const InputExamples = ({ isDarkMode }) => {
       label: "Input with Clear Button",
       content: (
         <InputContainer>
-          <label htmlFor="clear-button" className={styles.inputPageLabel}>
-            Input with Clear Button
-          </label>
           <Input
             ref={clearInputRef}
             id="clear-button"
@@ -111,7 +102,6 @@ const InputExamples = ({ isDarkMode }) => {
             type="text"
             placeholder="Type something"
             aria-describedby={showClear ? "clear-button-clear" : undefined}
-            className={styles.inputField}
           />
           {showClear && (
             <Button
@@ -134,16 +124,12 @@ const InputExamples = ({ isDarkMode }) => {
       label: "Password Input with Toggle",
       content: (
         <InputContainer>
-          <label htmlFor="password-toggle" className={styles.inputPageLabel}>
-            Password Input with Toggle
-          </label>
           <Input
             id="password-toggle"
             type={showPassword ? "text" : "password"}
             aria-required="true"
             placeholder="Enter password"
             aria-describedby="password-toggle-description"
-            className={styles.inputField}
           />
           <Button
             type="button"
@@ -167,19 +153,16 @@ const InputExamples = ({ isDarkMode }) => {
       label: "Input with Prefix and Suffix",
       content: (
         <InputContainer>
-          <label htmlFor="prefix" className={styles.inputPageLabel}>
-            Input with Prefix and Suffix
-          </label>
-          <span className={styles.iconStyle}>$</span>
+          <span className={styles.prefixSuffix}>&#36;</span>
           <Input
             id="prefix"
             type="number"
             inputMode="decimal"
             pattern="[0-9]*"
             placeholder="Amount"
-            className={styles.inputField}
+            aria-describedby="currency-input-description"
           />
-          <span className={styles.iconStyle}>.00</span>
+          <span className={styles.prefixSuffix}>.00</span>
         </InputContainer>
       ),
     },
@@ -187,15 +170,12 @@ const InputExamples = ({ isDarkMode }) => {
       label: "Input with Leading Icon",
       content: (
         <InputContainer>
-          <label htmlFor="icon-input" className={styles.inputPageLabel}>
-            Input with Leading Icon
-          </label>
-          <GenericAccountLow className={styles.iconStyle} />
+          <GenericAccountLow style={iconStyle} />
           <Input
             id="icon-input"
             type="text"
             placeholder="Username"
-            className={styles.inputField}
+            aria-labelledby="username-label"
           />
         </InputContainer>
       ),
@@ -204,16 +184,12 @@ const InputExamples = ({ isDarkMode }) => {
       label: "Read-only Input",
       content: (
         <InputContainer>
-          <label htmlFor="readonly" className={styles.inputPageLabel}>
-            Read-only Input
-          </label>
           <Input
             id="readonly"
             type="text"
             value="Can't edit this"
             readOnly
             aria-readonly="true"
-            className={styles.inputField}
           />
         </InputContainer>
       ),
@@ -222,16 +198,12 @@ const InputExamples = ({ isDarkMode }) => {
       label: "Disabled Input",
       content: (
         <InputContainer>
-          <label htmlFor="disabled" className={styles.inputPageLabel}>
-            Disabled Input
-          </label>
           <Input
             id="disabled"
             type="text"
             disabled
             value="Not editable"
             aria-disabled="true"
-            className={styles.inputField}
           />
         </InputContainer>
       ),
@@ -241,9 +213,6 @@ const InputExamples = ({ isDarkMode }) => {
       content: (
         <>
           <InputContainer>
-            <label htmlFor="error-input" className={styles.inputPageLabel}>
-              Input with Error and Reset
-            </label>
             <Input
               id="error-input"
               ref={errorInputRef}
@@ -253,7 +222,6 @@ const InputExamples = ({ isDarkMode }) => {
               aria-invalid={inputError}
               aria-describedby="error-msg"
               placeholder="Enter name"
-              className={styles.inputField}
             />
           </InputContainer>
           {inputError && (
@@ -266,7 +234,7 @@ const InputExamples = ({ isDarkMode }) => {
               <VisaErrorTiny style={iconStyle} /> Name is required.
             </InputMessage>
           )}
-          <Utility vFlex vFlexRow vGap={12} className={styles.buttonWrapper}>
+          <Utility vFlex vFlexRow vGap={12} className={styles.buttonGroup}>
             <Button onClick={handleSubmit}>Submit</Button>
             <Button colorScheme="secondary" onClick={handleReset}>
               Reset
@@ -278,7 +246,7 @@ const InputExamples = ({ isDarkMode }) => {
   ];
 
   return (
-    <Utility vFlex vFlexCol vGap={32} className={styles.formContainer}>
+    <Utility vFlex vFlexCol vGap={32} className={styles.pageWrapper}>
       <Utility vFlex vFlexCol vGap={4}>
         <Typography variant="headline-3">Input</Typography>
         <Typography variant="body-1">
@@ -286,7 +254,7 @@ const InputExamples = ({ isDarkMode }) => {
         </Typography>
       </Utility>
       {inputs.map(({ label, content }, i) => (
-        <Utility tag="section" key={i} vFlex vFlexCol vGap={16}>
+        <Utility tag="section" key={i} vFlex vFlexCol vGap={2}>
           <Typography variant="headline-4">{label}</Typography>
           {content}
         </Utility>
@@ -295,4 +263,86 @@ const InputExamples = ({ isDarkMode }) => {
   );
 };
 
-export default InputExamples;
+const fullCode = `// Usage Examples
+<InputContainer>
+  <Input id="error-input" value={errorValue} aria-invalid={true} />
+</InputContainer>
+<InputMessage><VisaErrorTiny /> Name is required.</InputMessage>
+<Button onClick={handleSubmit}>Submit</Button>
+<Button onClick={handleReset}>Reset</Button>`;
+
+export default function InputPage({ isDarkMode }) {
+  return (
+    <ComponentDocLayout
+      title={
+        <div className={styles.titleBar}>
+          <span>Input</span>
+          <Utility
+            vFlex
+            vFlexRow
+            vGap={16}
+            vAlignItems="center"
+            className={styles.buttonBar}
+          >
+            <HomeButton />
+          </Utility>
+        </div>
+      }
+      description="Input fields for collecting user-entered text or numbers. Includes variants for clear buttons, icons, password toggles, and read-only states, with validation and reset."
+      preview={<InputExamples isDarkMode={isDarkMode} />}
+      code={fullCode}
+      props={[
+        {
+          name: "type",
+          type: '"text" | "email" | "password" | "tel" | "number"',
+          description: "Specifies the input type",
+        },
+        {
+          name: "value",
+          type: "string",
+          description: "Current value of the input",
+        },
+        {
+          name: "onChange",
+          type: "(event) => void",
+          description: "Handler to update the input state",
+        },
+        {
+          name: "placeholder",
+          type: "string",
+          description: "Placeholder text displayed inside the input",
+        },
+        {
+          name: "aria-required",
+          type: "boolean",
+          description: "Marks the input as required for accessibility",
+        },
+        {
+          name: "aria-invalid",
+          type: "boolean",
+          description: "Indicates the input is invalid",
+        },
+        {
+          name: "readOnly",
+          type: "boolean",
+          description: "Makes the input read-only",
+        },
+        {
+          name: "disabled",
+          type: "boolean",
+          description: "Disables the input field",
+        },
+        {
+          name: "inputMode",
+          type: '"text" | "decimal" | "numeric" | "tel" | "email"',
+          description: "Helps mobile keyboards optimize input",
+        },
+        {
+          name: "pattern",
+          type: "string",
+          description: "Regex pattern for validation",
+        },
+      ]}
+    />
+  );
+}

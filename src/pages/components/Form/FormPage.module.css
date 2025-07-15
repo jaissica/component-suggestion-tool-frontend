@@ -1,16 +1,14 @@
-.formContainer {
+.formWrapper {
   max-width: 720px;
-  margin: 0 auto;
 }
 
-.inputField,
-.textareaField {
+.inputField {
   border-radius: 12px;
   padding: 12px;
   font-size: 1rem;
 }
 
-.textareaField {
+.textarea {
   min-height: 120px;
   resize: vertical;
 }
@@ -19,7 +17,7 @@
   color: red;
 }
 
-.rememberText {
+.checkboxText {
   margin-left: 4px;
 }
 
@@ -30,21 +28,12 @@
   font-weight: 600;
 }
 
-.pageTitleWrapper {
+.titleBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.pageTitle {
-  font-size: 1.5rem;
-}
-
-.buttonWrapper {
+.homeButtonBar {
   margin-bottom: 1.5rem;
-}
-
-.sectionHeader {
-  font-size: 1.25rem;
-  font-weight: bold;
 }

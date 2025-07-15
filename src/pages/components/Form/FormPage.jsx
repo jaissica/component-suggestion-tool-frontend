@@ -83,7 +83,7 @@ const FormExample = () => {
   };
 
   return (
-    <Utility vFlex vFlexCol vGap={32} className={styles.formContainer}>
+    <Utility vFlex vFlexCol vGap={32} className={styles.formWrapper}>
       <Typography variant="headline-4">User Information Form</Typography>
       <form onSubmit={handleSubmit} noValidate>
         <Utility vFlex vFlexCol vGap={20}>
@@ -198,7 +198,7 @@ const FormExample = () => {
             aria-required="true"
             aria-describedby={errors.notes ? "notes-error" : undefined}
             placeholder="Add any additional notes here"
-            className={styles.textareaField}
+            className={`${styles.inputField} ${styles.textarea}`}
           />
           {errors.notes && (
             <Typography
@@ -217,7 +217,7 @@ const FormExample = () => {
               checked={form.rememberMe}
               onChange={handleChange("rememberMe")}
             />
-            <Typography variant="body-3" className={styles.rememberText}>
+            <Typography variant="body-3" className={styles.checkboxText}>
               Keep me signed in on this device
             </Typography>
           </Utility>
@@ -240,14 +240,14 @@ export default function FormPage() {
   return (
     <ComponentDocLayout
       title={
-        <div className={styles.pageTitleWrapper}>
-          <span className={styles.pageTitle}>Form</span>
+        <div className={styles.titleBar}>
+          <span>Form</span>
           <Utility
             vFlex
             vFlexRow
             vGap={16}
             vAlignItems="center"
-            className={styles.buttonWrapper}
+            className={styles.homeButtonBar}
           >
             <HomeButton />
           </Utility>

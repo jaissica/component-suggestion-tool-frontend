@@ -18,7 +18,7 @@ export default function ComponentDocLayout({
 
       {/* Preview Section */}
       <section className={styles.previewSection}>
-        <h2 className={styles.previewHeading}>Preview</h2>
+        <div>{preview}</div>
       </section>
 
       <hr className={styles.hr} />

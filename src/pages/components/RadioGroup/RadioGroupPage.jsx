@@ -10,7 +10,7 @@ import {
 import { VisaErrorTiny } from "@visa/nova-icons-react";
 import ComponentDocLayout from "../../../components/ComponentDocLayout/ComponentDocLayout";
 import HomeButton from "../../../components/HomeButton/HomeButton";
-import styles from "./RadioGroupPage.module.css"; // Import the CSS Module
+import styles from "./RadioGroupPage.module.css";
 
 const RadioExamples = () => {
   const singleRef = useRef(null);
@@ -90,11 +90,7 @@ const RadioExamples = () => {
             <Label htmlFor="validation-radio">Required</Label>
           </Utility>
           {singleInvalid && (
-            <InputMessage
-              id="validation-msg"
-              role="alert"
-              className={styles.inputMessage}
-            >
+            <InputMessage id="validation-msg" role="alert">
               <VisaErrorTiny /> You must select this option.
             </InputMessage>
           )}
@@ -107,7 +103,7 @@ const RadioExamples = () => {
                 setSingleInvalid(false);
               }
             }}
-            className={styles.button}
+            className={styles.marginTopButton}
           >
             Submit
           </Button>
@@ -145,15 +141,11 @@ const RadioExamples = () => {
             </Utility>
           ))}
           {groupError && (
-            <InputMessage
-              id="error-msg"
-              role="alert"
-              className={styles.inputMessage}
-            >
+            <InputMessage id="error-msg" role="alert">
               <VisaErrorTiny /> Please select one option.
             </InputMessage>
           )}
-          <Utility vFlex vFlexRow vGap={12} className={styles.buttonWrapper}>
+          <Utility vFlex vFlexRow vGap={12}>
             <Button
               onClick={() => {
                 if (!selectedOption) {
@@ -169,7 +161,6 @@ const RadioExamples = () => {
             <Button
               colorScheme="secondary"
               onClick={() => setSelectedOption("")}
-              className={styles.button}
             >
               Reset
             </Button>
@@ -193,13 +184,11 @@ const RadioExamples = () => {
   ];
 
   return (
-    <Utility vFlex vFlexCol vGap={32} className={styles.pageContainer}>
+    <Utility vFlex vFlexCol vGap={32}>
       {sectionData.map(({ title, content }, i) => (
         <section key={i}>
-          <Utility vFlex vFlexCol vGap={2} className={styles.sectionContainer}>
-            <Typography variant="headline-4" className={styles.sectionTitle}>
-              {title}
-            </Typography>
+          <Utility vFlex vFlexCol vGap={2}>
+            <Typography variant="headline-4">{title}</Typography>
             {content}
           </Utility>
         </section>
@@ -224,15 +213,15 @@ export default function RadioGroupPage() {
   return (
     <ComponentDocLayout
       title={
-        <div className={styles.pageTitleWrapper}>
-          <span className={styles.pageTitle}>Radio</span>
+        <div className={styles.titleBar}>
+          <span>Radio</span>
           <Utility
             vFlex
             vFlexRow
             vFlexColSm
             vGap={16}
             vAlignItems="center"
-            className={styles.utilitySpacing}
+            className={styles.homeButtonBar}
           >
             <HomeButton />
           </Utility>

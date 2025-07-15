@@ -12,6 +12,7 @@ export default function Sidebar({ isDarkMode }) {
     const baseURL = import.meta.env.VITE_API_URL?.replace(/\/+$/, "") || "";
 
     fetch(`${baseURL}/api/components`)
+      // fetch(`http://localhost:5050/api/components`)
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data) && data.length > 0) {
