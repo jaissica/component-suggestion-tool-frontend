@@ -124,4 +124,4 @@ The **styles page** contains global CSS and custom styling for the app. It utili
 
 ## **Deployment**
 
-The frontend project is deployed using **Netlify**. Here’s the https://component-suggestion-tool-frontend.netlify.app/ to the live app.
+The frontend project is deployed using **Netlify**. Here’s the https://component-suggestion-tool.netlify.app/ to the live app.
